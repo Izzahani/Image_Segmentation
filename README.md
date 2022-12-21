@@ -62,8 +62,10 @@
   <p align="center"><img src="epoch_loss.png" alt="epoch loss">
    
    <p>6. Model Deployment</p>
-   <ol>The picture below shows predicted image and evaluation result. The predicted image can be improve by using IOU.</ol>
+   <ol>- The picture below shows predicted image and evaluation result.</ol>
    <p align="center"><img src="model_evaluate.png" alt="evaluation">
+  <ol>- After training the model, my accuracy is 96%.</ol>
+  <ol>- However, the predicted image can be improve by using IOU.</ol>
  
  <p>7. Model Saving</p>
  <ol>- We can finally save the model by using <strong>model.save('model.h5)</strong>.</ol>
