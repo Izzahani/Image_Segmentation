@@ -45,31 +45,29 @@
    <ol>- Then, I used pretrained model as the feature extraction layers.</ol>
    <ol>- I list down the activation layers, feature extraction model, unsampling path and the output layer.</ol>
 <ol>- The model was used to construct the entire U-Net.</ol>
+ <p align="center"><img src="model.png" alt="model">
    
  <p>4. Model Evaluation</p>
  <ol>- In this section, the prediction is displayed.</ol>
   <p align="center"><img src="prediction_before.png" alt="prediction before_img">
- <ol>- Based on the image above, the predicted image is not clear. Thus, the model need to be trained to get a better prediction.</ol>
+ <ol>- Based on the image above, the predicted image is not clear. Thus, the model need to be trained to get a better image predicted.</ol>
  <ol>- I applied early stopping and tensorboard to improve the prediction</ol>
  
  <p>5. Model Training</p>
  <ol>- After that, the model was trained. </ol>
- <p align="center"><img src="model_training.png" alt="prediction img">
+ <ol>- Based on the image below, it shows that my predicted image is clearer compared to before training the model.</ol>
+ <p align="center"><img src="model_training.png" alt="model training img">
+ <ol>- The epoch accuracy and epoch loss was shown in the graph below. Based on the graph, the training data is in a good fit. </ol>
  <p align="center"><img src="epoch_acc.png" alt="epoch acc">
   <p align="center"><img src="epoch_loss.png" alt="epoch loss">
+   
+   <p>6. Model Deployment</p>
+   <ol>The picture below shows predicted image and evaluation result. The predicted image can be improve by using IOU.</ol>
+   <p align="center"><img src="model_evaluate.png" alt="evaluation">
  
- 
- <p> Then, the project is being compiled. The result as shown in the picture below:</p>
-  <p align="center"><img src="https://github.com/Izzahani/Article_Classification/blob/main/prediction.png" alt="descriptive text">
- <div align="center"><ol>The f1-score for accuracy based on the image is 81%. However, eliminating stop words can increase accuracy. Additionally, adding another dense layer might increase accuracy as well.</ol></div>
- 
- <p>For Epoch Acc</p>
-  <p align="center"><img src="https://github.com/Izzahani/Article_Classification/blob/main/epoch_acc.png" alt="epoch acc">
- <div align="center"><ol>According to the graph, the train model was coloured green. Between 1.5 and 2, the model started to get overfitted. Perhaps the Bidrectional LSTM layer is at cause. But when it reached to 2, it started to get close to optimum. So maybe the dropout layer is the reason. But at 3, it became overfitted again. I might need to add another dropout layer to reached the good git graph.</ol></div>
-
- <p>For Epoch Loss</p>
-  <p align="center"><img src="https://github.com/Izzahani/Article_Classification/blob/main/epoch_loss.png" alt="epoch loss">
+ <p>7. Model Saving</p>
+ <ol>- We can finally save the model.</ol>
  
 ## Acknowledgement
-Special thanks to [(https://raw.githubusercontent.com/susanli2016/PyCon-Canada-2019-NLP-Tutorial/master/bbc-text.csv)](https://raw.githubusercontent.com/susanli2016/PyCon-Canada-2019-NLP-Tutorial/master/bbc-text.csv) :smile:
+Special thanks to [(https://www.kaggle.com/competitions/data-science-bowl-2018/overview)](https://www.kaggle.com/competitions/data-science-bowl-2018/overview) :smile:
 
