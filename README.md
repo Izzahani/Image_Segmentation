@@ -14,7 +14,7 @@
 
 <p>There several steps need to be complete to build the model.</p>
 <p>1. Data Loading</p>
-  <ol>- Jn this project, I used operating system (os) to load the data by joining the dataset with train and test.</ol>
+  <ol>- In this project, I used operating system (os) to load the data by joining the dataset with train and test.</ol>
   <ol>- In order to upload the images of inputs and masks in the train and test dataset, I used opencv. In the coding, I also included the image's colour. For inputs, I set it to RGB and grayscale for masks. </ol>
   <ol>- I did the same procedure for testing data.</ol>
   
@@ -66,7 +66,7 @@
    <p align="center"><img src="model_evaluate.png" alt="evaluation">
  
  <p>7. Model Saving</p>
- <ol>- We can finally save the model.</ol>
+ <ol>- We can finally save the model by using <strong>model.save('model.h5)</strong>.</ol>
  
 ## Acknowledgement
 Special thanks to [(https://www.kaggle.com/competitions/data-science-bowl-2018/overview)](https://www.kaggle.com/competitions/data-science-bowl-2018/overview) :smile:
