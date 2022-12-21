@@ -18,7 +18,7 @@
   <ol>- In order to upload the images of inputs and masks in the train and test dataset, I used opencv. In the coding, I also included the image's colour. For inputs, I set it to RGB and grayscale for masks. </ol>
   <ol>- I did the same procedure for testing data.</ol>
   
-<p>2. Data Pre-processing/p>
+<p>2. Data Pre-processing</p>
    <ol>- The images was in list. Therefore, I converted the images to numpy array.</ol>
    <ol>- Then, I checked some examples. Image belows show the images in training data. </ol>
    <p align="center"><img src="example_img.PNG" alt="examaple img">
