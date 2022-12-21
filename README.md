@@ -49,22 +49,22 @@
  <p>4. Model Evaluation</p>
  <ol>- In this section, the prediction is displayed.</ol>
   <p align="center"><img src="prediction_before.png" alt="prediction before_img">
- <ol>- Based on the image above, the predicted image is not clear. Thus, the model need to be trained to get a better image predicted.</ol>
+ <ol>- Based on the image above, the predicted image is not clear. Thus, the model need to be trained to get a better mask predicted.</ol>
  <ol>- I applied early stopping and tensorboard to improve the prediction</ol>
  
  <p>5. Model Training</p>
  <ol>- After that, the model was trained. </ol>
- <ol>- Based on the image below, it shows that my predicted image is clearer compared to before training the model.</ol>
+ <ol>- Based on the image below, it shows that my predicted mask is clearer compared to before training the model.</ol>
  <p align="center"><img src="model_training.png" alt="model training img">
  <ol>- The epoch accuracy and epoch loss was shown in the graph below. Based on the graph, the training data is in a good fit. </ol>
  <p align="center"><img src="epoch_acc.png" alt="epoch acc">
   <p align="center"><img src="epoch_loss.png" alt="epoch loss">
    
    <p>6. Model Deployment</p>
-   <ol>- The picture below shows predicted image and evaluation result.</ol>
+   <ol>- The picture below shows predicted mask and evaluation result.</ol>
    <p align="center"><img src="model_evaluate.png" alt="evaluation">
   <ol>- After training the model, my accuracy is 96%.</ol>
-  <ol>- However, the predicted image can be improve by using IOU.</ol>
+  <ol>- However, the predicted mask can be improve by using IOU.</ol>
  
  <p>7. Model Saving</p>
  <ol>- We can finally save the model by using <strong>model.save('model.h5)</strong>.</ol>
