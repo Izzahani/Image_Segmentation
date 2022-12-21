@@ -187,7 +187,7 @@ for images, masks in train_batches.take(2):
   sample_image, sample_mask = images[0], masks[0]
   display([sample_image, sample_mask])
 
-#%% Step 4) Model Development
+#%% Step 3) Model Development
 # Create image segmentation model
 # Use a pretrained model as the feature extraction layers
 base_model = keras.applications.MobileNetV2(input_shape=[128,128,3],include_top=False)
@@ -247,7 +247,7 @@ loss = losses.SparseCategoricalCrossentropy(from_logits=True)
 model.compile(optimizer='adam',loss=loss,metrics=['accuracy'])
 keras.utils.plot_model(model, show_shapes=True)
 
-#%% Step 5) Model Evaluation
+#%% Step 4) Model Evaluation
 #Create functions to show predictions
 def create_mask(pred_mask):
     pred_mask = tf.argmax(pred_mask,axis=-1)
@@ -284,7 +284,7 @@ tensorboard_callback = TensorBoard(log_dir=LOGS_PATH)
 early_stop_callback = EarlyStopping(monitor='val_loss', patience=5)
  
 #%%
-#Step 6) Model Training
+#Step 5) Model Training
 #Hyperparameters for the model
 EPOCHS = 10
 VAL_SUBSPLITS = 5
@@ -292,12 +292,12 @@ VALIDATION_STEPS = len(val_dataset)//BATCH_SIZE//VAL_SUBSPLITS
 
 history = model.fit(train_batches,validation_data=val_batches,epochs=EPOCHS,steps_per_epoch=STEPS_PER_EPOCH,validation_steps=VALIDATION_STEPS,callbacks=[DisplayCallback(),tensorboard_callback, early_stop_callback])
 
-#%% Step 7) Model Deployment
+#%% Step 6) Model Deployment
 show_predictions(test_batches,3)
 print(model.evaluate(test_batches))
 
 
-#%% Step 8) Model Saving
+#%% Step 7) Model Saving
 # save model
 model.save('model.h5')
 # %%
